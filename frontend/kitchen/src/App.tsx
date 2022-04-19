@@ -21,6 +21,7 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Theme } from "@emotion/react";
 
 initializeApp({
   apiKey: "AIzaSyC5_gE3yXN12n_R-VNY9XkSWqYTuV2EFAI",
@@ -80,9 +81,7 @@ function App() {
         </AppBar>
         <Box sx={{ display: "flex", flexGrow: 1 }}>
           <Box sx={{ borderRight: 1, borderColor: "divider" }}>
-            <Collapse in={open} orientation="horizontal" collapsedSize={55}>
-              <NavList loggedIn={user as any} />
-            </Collapse>
+            <NavList loggedIn={user as any} open={open} />
           </Box>
           <Box
             sx={{
