@@ -88,7 +88,7 @@ export default function RecipeEditor() {
   const [tags, setTags] = useState(initTags);
   const [portionSize, setPortionSize] = useState(initPortionSize);
   const [ingredients, setIngredients] = useState(initIngrediens);
-  const xsSize = useMediaQuery("(max-width:420px)");
+  const xsSize = useMediaQuery("(max-width:440px)");
 
   const portionButtonWidth = xsSize ? 28 : 35;
   const portionSizeElem = (
